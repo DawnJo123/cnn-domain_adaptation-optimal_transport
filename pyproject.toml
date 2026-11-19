@@ -1,0 +1,38 @@
+[project]
+name = "cnn-domain-adaptation-optimal-transport"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Dawn", email = "dawnnjezhu0007@gmail.com" }
+]
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "ipykernel>=7.4.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.5",
+    "pandas>=3.1.1",
+    "pillow>=13.0.0",
+    "pot>=0.9.7.post1",
+    "scikit-learn>=1.9.1",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+    "tqdm>=4.70.1",
+]
+
+[project.scripts]
+cnn-domain-adaptation-optimal-transport = "cnn_domain_adaptation_optimal_transport:main"
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
+torchvision = { index = "pytorch-cu124" }

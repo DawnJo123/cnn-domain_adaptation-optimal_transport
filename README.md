@@ -109,7 +109,7 @@ The evaluated methods are:
 For Sinkhorn variants, the initial entropy regularization was set to 5% of the mean cost:
 
 $$
-\text{reg\_e} = 0.05 \times \operatorname{mean}(C) = 32.8204453315
+\text{reg\_e} = 0.05 \times \text{mean}(C) = 32.8204453315
 $$
 
 The class-regularization values used in this initial experiment were:
